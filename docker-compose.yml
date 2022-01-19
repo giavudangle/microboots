@@ -1,0 +1,45 @@
+version: '3'
+services:
+  mongodb:
+    container_name: mongodb-micro-boots
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - "mongodata/mongodb:/data/mongodb"
+    env_file:
+      - env/mongo.env
+    networks:
+      - mongo_network
+  postgressql:
+    container_name: postgres-micro-boots
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresdata/postgres:/data/postgres
+    env_file:
+      - env/postgres.env
+    networks:
+      - postgres_network
+  mysql:
+    container_name: mysql-micro-boots
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldata/mysql:/data/mysql
+    env_file:
+      - env/mysql.env
+    networks:
+      - mysql_network
+
+volumes:
+  mongodata:
+  postgresdata:
+  mysqldata:
+
+networks:
+  mongo_network:
+  postgres_network:
+  mysql_network:
