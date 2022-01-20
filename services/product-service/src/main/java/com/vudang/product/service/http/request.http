@@ -1,0 +1,2 @@
+CURL -H "Content-Type: application/json" -X POST -d '{"name":"Phao câu","description":"Chiếc phao câu siêu to khổng lồ","price":999999999}' http://localhost:9001/api/v1/product
+CURL -X GET http://localhost:9001/api/v1/product
