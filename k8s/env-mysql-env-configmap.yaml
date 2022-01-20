@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  MYSQL_DATABASE: inventory-service-db
+  MYSQL_PASSWORD: Giavu2202@@
+  MYSQL_ROOT_HOST: localhost
+  MYSQL_ROOT_PASSWORD: Giavu2202@@
+  MYSQL_USER: admin
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysql-env-mysql-env
+  name: env-mysql-env

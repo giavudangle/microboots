@@ -1,4 +1,10 @@
 apiVersion: v1
+data:
+  MONGO_DATABASE: product-service-db
+  MONGO_PASSWORD: Giavu2202@@
+  MONGO_PORT: "27017"
+  MONGO_ROLE: userAdmin
+  MONGO_USER: admin
 kind: ConfigMap
 metadata:
   creationTimestamp: null
